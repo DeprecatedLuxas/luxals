@@ -1,0 +1,20 @@
+{
+  "name": "@deprecatedluxas/luxals",
+  "version": "0.0.1",
+  "description": "A collection of utils i find useful",
+  "type": "module",
+  "scripts": {
+    "build": "tsx ./scripts/build.ts",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
+  },
+  "author": "Lucas Norgaard <lucasnrgaard@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "c8": "^7.11.3",
+    "esbuild": "^0.14.42",
+    "tsx": "^3.4.2",
+    "typescript": "^4.7.2",
+    "vitest": "^0.13.0"
+  }
+}

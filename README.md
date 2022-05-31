@@ -1,2 +1,2 @@
 # luxals
-:rocket: A :package: of utils i find useful
+:star: A collection of utils i find useful :star:
