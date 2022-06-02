@@ -6,13 +6,18 @@
   "scripts": {
     "build": "tsx ./scripts/build.ts",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
   },
   "author": "Lucas Norgaard <lucasnrgaard@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
     "c8": "^7.11.3",
     "esbuild": "^0.14.42",
+    "eslint": "^8.16.0",
     "tsx": "^3.4.2",
     "typescript": "^4.7.2",
     "vitest": "^0.13.0"

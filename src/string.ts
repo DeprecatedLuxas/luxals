@@ -16,7 +16,7 @@ export function concat(...args: any[]): string {
       classes.push(...arg);
     } else if (argumentType === "object") {
       if (arg.toString === Object.prototype.toString) {
-        for (var key in arg) {
+        for (const key in arg) {
           if (hasOwn.call(arg, key) && arg[key]) {
             classes.push(key);
           }
