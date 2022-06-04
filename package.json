@@ -12,6 +12,7 @@
   },
   "author": "Lucas Norgaard <lucasnrgaard@gmail.com>",
   "license": "MIT",
+  "packageManager": "pnpm@7.1.7",
   "devDependencies": {
     "@deprecatedluxas/eslint-config": "^0.1.0",
     "c8": "^7.11.3",
