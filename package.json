@@ -1,8 +1,11 @@
 {
   "name": "@deprecatedluxas/luxals",
-  "version": "0.0.1",
-  "description": "A collection of utils i find useful",
   "type": "module",
+  "version": "0.0.1",
+  "packageManager": "pnpm@7.1.7",
+  "description": "A collection of utils i find useful",
+  "author": "Lucas Norgaard <lucasnrgaard@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "build": "tsx ./scripts/build.ts",
     "test": "vitest",
@@ -10,16 +13,13 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit"
   },
-  "author": "Lucas Norgaard <lucasnrgaard@gmail.com>",
-  "license": "MIT",
-  "packageManager": "pnpm@7.1.7",
   "devDependencies": {
     "@deprecatedluxas/eslint-config": "^0.1.0",
     "c8": "^7.11.3",
     "esbuild": "^0.14.42",
-    "eslint": "^8.16.0",
+    "eslint": "^8.17.0",
     "tsx": "^3.4.2",
-    "typescript": "^4.7.2",
-    "vitest": "^0.13.0"
+    "typescript": "^4.7.3",
+    "vitest": "^0.13.1"
   }
 }
