@@ -1,7 +1,7 @@
 {
   "name": "@deprecatedluxas/luxals",
-  "type": "module",
   "version": "0.0.1",
+  "type": "module",
   "packageManager": "pnpm@7.1.7",
   "description": "A collection of utils i find useful",
   "author": "Lucas Norgaard <lucasnrgaard@gmail.com>",
@@ -14,7 +14,7 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@deprecatedluxas/eslint-config": "^0.1.0",
+    "@deprecatedluxas/eslint-config": "^0.1.1",
     "c8": "^7.11.3",
     "esbuild": "^0.14.42",
     "eslint": "^8.17.0",
