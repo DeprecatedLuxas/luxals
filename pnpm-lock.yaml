@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@deprecatedluxas/eslint-config': ^0.1.1
+  '@deprecatedluxas/eslint-config': ^0.1.2
   c8: ^7.11.3
   esbuild: ^0.14.42
   eslint: ^8.17.0
@@ -10,7 +10,7 @@ specifiers:
   vitest: ^0.13.1
 
 devDependencies:
-  '@deprecatedluxas/eslint-config': 0.1.1_ud6rd4xtew5bv4yhvkvu24pzm4
+  '@deprecatedluxas/eslint-config': 0.1.2_ud6rd4xtew5bv4yhvkvu24pzm4
   c8: 7.11.3
   esbuild: 0.14.42
   eslint: 8.17.0
@@ -45,8 +45,8 @@ packages:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
     dev: true
 
-  /@deprecatedluxas/eslint-config/0.1.1_ud6rd4xtew5bv4yhvkvu24pzm4:
-    resolution: {integrity: sha512-dNfuQubRgcNQmGNCtBE3HdntQaHXnM35zK8cSwNHYiuEt2KgB5t99iyctd5pf4SYvxk03o3YDtMMGe81TodaqQ==}
+  /@deprecatedluxas/eslint-config/0.1.2_ud6rd4xtew5bv4yhvkvu24pzm4:
+    resolution: {integrity: sha512-0R8mFdfadhIvDJ3U+tKbclYckYm/YOfrRL/mcxP+aW+KYhZHkWybxzWFEr1zD6wNcFOflsH4IFrtqfF0fvpwHw==}
     peerDependencies:
       eslint: ^8.16.0
       typescript: ^4.7.2
@@ -561,7 +561,7 @@ packages:
     dev: true
 
   /concat-map/0.0.1:
-    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
+    resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
     dev: true
 
   /convert-source-map/1.8.0:
