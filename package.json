@@ -18,6 +18,14 @@
   "publishConfig": {
     "access": "public"
   },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
   "files": [
     "dist"
   ],
