@@ -10,20 +10,20 @@ export function clamp(value: number, min: number, max: number): number {
 }
 
 /**
- * Test a number to see if it is a negative
+ * Is the number negative
  * @param {number} value the number to test
  * @returns {boolean} either true or false
  */
-export function negative(value: number): boolean {
+export function isNegative(value: number): boolean {
   return value < 0;
 }
 
 /**
- * Test a number to see if it is a positive
+ * Is the number positive
  * @param {number} value the number to test
  * @returns {boolean} either true or false
  */
-export function positive(value: number): boolean {
+export function isPositive(value: number): boolean {
   return value > 0;
 }
                                                                                                                                                                       

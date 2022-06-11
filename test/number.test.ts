@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { clamp, negative, positive } from "../src";
+import { clamp, isNegative, isPositive } from "../src";
 
 describe("clamp test", () => {
   it("should return 230 & 100", () => {
@@ -10,16 +10,16 @@ describe("clamp test", () => {
 
 describe("negative", () => {
   it("should return [true, false, false]", () => {
-    expect(negative(-1)).toEqual(true);
-    expect(negative(0)).toEqual(false);
-    expect(negative(1)).toEqual(false);
+    expect(isNegative(-1)).toEqual(true);
+    expect(isNegative(0)).toEqual(false);
+    expect(isNegative(1)).toEqual(false);
   });
 });
 
 describe("positive", () => {
   it("should return [true, false, true]", () => {
-    expect(positive(999999999)).toEqual(true);
-    expect(positive(0)).toEqual(false);
-    expect(positive(1)).toEqual(true);
+    expect(isPositive(999999999)).toEqual(true);
+    expect(isPositive(0)).toEqual(false);
+    expect(isPositive(1)).toEqual(true);
   });
 });
