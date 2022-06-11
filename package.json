@@ -1,6 +1,6 @@
 {
   "name": "@deprecatedluxas/luxals",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "packageManager": "pnpm@7.1.7",
   "description": "A collection of JavaScript & TypeScript utilities.",
   "author": "Lucas Norgaard <lucasnrgaard@gmail.com>",
