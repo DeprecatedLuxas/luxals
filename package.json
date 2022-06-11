@@ -1,24 +1,35 @@
 {
   "name": "@deprecatedluxas/luxals",
   "version": "0.0.1",
-  "type": "module",
   "packageManager": "pnpm@7.1.7",
-  "description": "A collection of utils i find useful",
+  "description": "A collection of JavaScript & TypeScript utilities.",
   "author": "Lucas Norgaard <lucasnrgaard@gmail.com>",
   "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
-    "build": "tsx ./scripts/build.ts",
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "bump": "bumpp package.json --commit --push --tag",
+    "release": "pnpm publish --access public"
   },
   "devDependencies": {
     "@deprecatedluxas/eslint-config": "^0.1.4",
+    "bumpp": "^7.1.1",
     "c8": "^7.11.3",
-    "esbuild": "^0.14.42",
     "eslint": "^8.17.0",
-    "tsx": "^3.4.2",
+    "tsup": "^6.1.2",
     "typescript": "^4.7.3",
     "vitest": "^0.13.1"
   }
