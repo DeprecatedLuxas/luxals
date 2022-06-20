@@ -1,6 +1,6 @@
 {
-  "name": "@deprecatedluxas/luxals",
-  "version": "0.1.2",
+  "name": "@luxass/luxals",
+  "version": "0.0.0",
   "packageManager": "pnpm@7.1.7",
   "description": "A collection of JavaScript & TypeScript utilities.",
   "author": "Lucas Norgaard <lucasnrgaard@gmail.com>",
@@ -39,7 +39,8 @@
     "release": "pnpm publish --access public"
   },
   "devDependencies": {
-    "@deprecatedluxas/eslint-config": "^0.1.4",
+    "@luxass/eslint-config": "^1.0.0",
+    "@luxass/prettier-config": "^1.0.0",
     "bumpp": "^7.1.1",
     "c8": "^7.11.3",
     "eslint": "^8.17.0",
