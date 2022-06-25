@@ -5,7 +5,7 @@ import { timeSeed } from "./random";
  *
  * Migrated to TypeScript
  *
- * Original C++ code here:
+ * Original C code here:
  * http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/MT2002/CODES/mt19937ar.c
  *
  * The original port to JavaScript, on which this file is based, was done by Sean McCullough. It can be found at:
