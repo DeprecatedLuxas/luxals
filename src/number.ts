@@ -26,4 +26,3 @@ export function isNegative(value: number): boolean {
 export function isPositive(value: number): boolean {
   return value > 0;
 }
-                                                                                                                                                                      

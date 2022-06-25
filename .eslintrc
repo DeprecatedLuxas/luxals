@@ -1,3 +1,6 @@
 {
-  "extends": "@luxass"
+  "extends": "@luxass",
+  "rules": {
+    "eol-last": "off"
+  }
 }
