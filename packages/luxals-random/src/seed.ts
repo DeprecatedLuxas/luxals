@@ -1,5 +1,3 @@
-export * from "./mersenne";
-
 /**
  * Generates a random number seed based on the current time.
  * @returns {number} a random number seed
