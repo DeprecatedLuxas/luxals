@@ -31,12 +31,10 @@
   ],
   "scripts": {
     "build": "tsup",
-    "dev": "tsup --watch",
-    "test": "vitest run"
+    "dev": "tsup --watch"
   },
   "devDependencies": {
     "tsup": "^6.1.2",
-    "typescript": "^4.7.3",
-    "vitest": "^0.13.1"
+    "typescript": "^4.7.3"
   }
 }
