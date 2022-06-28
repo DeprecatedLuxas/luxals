@@ -9,9 +9,12 @@
     "dev": "turbo run dev",
     "lint": "eslint packages/**/*.ts",
     "lint:fix": "eslint packages/**/*.ts --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "changeset": "changeset",
+    "release": "changeset publish"
   },
   "devDependencies": {
+    "@changesets/changelog-github": "^0.4.5",
     "@changesets/cli": "^2.23.0",
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
