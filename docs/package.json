@@ -2,7 +2,7 @@
   "name": "@luxass/luxals-docs",
   "scripts": {
     "dev": "vitepress dev markdown",
-    "build": "vitepress build markdown",
+    "build": "vitepress build markdown && ls",
     "serve": "vitepress serve markdown"
   },
   "devDependencies": {
