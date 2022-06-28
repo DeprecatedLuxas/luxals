@@ -3,7 +3,7 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   lang: "en-US",
   title: "@luxass/luxals",
-  description: "Vite & Vue powered static site generator.",
+  description: "TypeScript and JavaScript utilities",
 
   lastUpdated: true,
 
