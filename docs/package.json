@@ -1,10 +1,9 @@
 {
   "name": "@luxass/luxals-docs",
-  "private": true,
   "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
+    "dev": "vitepress dev markdown",
+    "build": "vitepress build markdown",
+    "serve": "vitepress serve markdown"
   },
   "devDependencies": {
     "vitepress": "1.0.0-alpha.4",
