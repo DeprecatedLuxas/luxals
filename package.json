@@ -11,7 +11,10 @@
     "lint:fix": "eslint packages/**/*.ts --fix",
     "prepare": "husky install",
     "changeset": "changeset",
-    "release": "changeset publish"
+    "release": "changeset publish",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.5",
