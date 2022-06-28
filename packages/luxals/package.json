@@ -1,6 +1,6 @@
 {
   "name": "@luxass/luxals",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "packageManager": "pnpm@7.1.7",
   "description": "A collection of JavaScript & TypeScript utilities.",
   "author": "Lucas Norgaard <lucasnrgaard@gmail.com>",
@@ -36,5 +36,12 @@
   "devDependencies": {
     "tsup": "^6.1.2",
     "typescript": "^4.7.3"
+  },
+  "dependencies": {
+    "@luxass/luxals-number": "workspace:^2.0.0",
+    "@luxass/luxals-pipi": "workspace:^2.0.0",
+    "@luxass/luxals-random": "workspace:^2.0.0",
+    "@luxass/luxals-string": "workspace:^2.0.0",
+    "@luxass/luxals-types": "workspace:^2.0.0"
   }
 }
