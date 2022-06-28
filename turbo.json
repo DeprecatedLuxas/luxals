@@ -8,6 +8,11 @@
     },
     "dev": {
       "cache": false
+    },
+    "test": {
+      "dependsOn": ["build"],
+      "outputs": [],
+      "inputs": ["test/**/*.ts"]
     }
   }
 }
