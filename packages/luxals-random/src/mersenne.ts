@@ -1,4 +1,4 @@
-import { timeSeed } from "./random";
+import { timeSeed } from "./seed";
 
 /**
  * Mersenne Twister

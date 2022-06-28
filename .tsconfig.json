@@ -8,15 +8,9 @@
     "esModuleInterop": true,
     "allowJs": true,
     "alwaysStrict": false,
-    // "strictNullChecks": true,
-    // "strictBindCallApply": true,
     "strictFunctionTypes": true,
-    // "strictPropertyInitialization": true,
-    // "noImplicitAny": true,
-    // "noImplicitThis": true,
     "useUnknownInCatchVariables": true,
     "stripInternal": true
   },
-  "include": ["src/**/*"],
   "exclude": ["dist", "node_modules"]
 }
