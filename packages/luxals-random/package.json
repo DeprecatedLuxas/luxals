@@ -28,6 +28,17 @@
   "files": [
     "dist"
   ],
+  "keywords": [
+    "typescript",
+    "ts",
+    "utility",
+    "util",
+    "utilities",
+    "random",
+    "prng",
+    "pseudorandom",
+    "number random"
+  ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",

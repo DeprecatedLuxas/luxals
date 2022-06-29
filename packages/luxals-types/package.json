@@ -1,7 +1,7 @@
 {
   "name": "@luxass/luxals-types",
   "version": "2.0.0",
-  "description": "A collection of JavaScript & TypeScript utilities.",
+  "description": "A collection of TypeScript types",
   "author": "Lucas Norgaard <lucasnrgaard@gmail.com>",
   "license": "MIT",
   "exports": {
@@ -23,6 +23,14 @@
   },
   "files": [
     "dist"
+  ],
+  "keywords": [
+    "typescript",
+    "ts",
+    "types",
+    "utility",
+    "util",
+    "utilities"
   ],
   "scripts": {
     "build": "tsup",

@@ -28,6 +28,15 @@
   "files": [
     "dist"
   ],
+  "keywords": [
+    "typescript",
+    "ts",
+    "utility",
+    "util",
+    "utilities",
+    "mustache",
+    "template"
+  ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
