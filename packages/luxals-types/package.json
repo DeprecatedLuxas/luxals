@@ -1,8 +1,7 @@
 {
   "name": "@luxass/luxals-types",
   "version": "2.0.0",
-  "packageManager": "pnpm@7.1.7",
-  "description": "types for luxals",
+  "description": "A collection of JavaScript & TypeScript utilities.",
   "author": "Lucas Norgaard <lucasnrgaard@gmail.com>",
   "license": "MIT",
   "exports": {
