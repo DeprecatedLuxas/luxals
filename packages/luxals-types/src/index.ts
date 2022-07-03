@@ -3,14 +3,7 @@
  *
  * {@link https://developer.mozilla.org/en-US/docs/Glossary/Primitive}
  */
-export type Primitive =
-  | string
-  | number
-  | bigint
-  | boolean
-  | undefined
-  | symbol
-  | null;
+export type Primitive = string | number | bigint | boolean | undefined | symbol | null;
 
 /**
  * Makes a type nullable
@@ -71,10 +64,23 @@ export type AllCharacters = UpperCaseCharacters | LowerCaseCharacters;
 /**
  * Combine a primitive type and a literal type into a union type.
  *
- * Keeps IDE auto-completion <3
+ * Keeps IDE auto-completion
  *
  * {@link https://github.com/Microsoft/TypeScript/issues/29729}
  */
-export type UnionLiteral<T extends Primitive, L> =
-  | L
-  | (T & Record<never, never>);
+export type UnionLiteral<T extends Primitive, L> = L | (T & Record<never, never>);
+
+
+/**
+ * Adds interface auto-completion with dot notation
+ * @TODO: Write a better description for this.
+ */
+export type Path<T> = ChildPath<T, keyof T> | keyof T;
+
+type ChildPath<T, K extends keyof T> = K extends string
+  ? T[K] extends Record<string, any>
+    ?
+      | `${K}.${ChildPath<T[K], Exclude<keyof T[K], keyof any[]>> & string}`
+      | `${K}.${Exclude<keyof T[K], keyof any[]> & string}`
+    : never
+  : never;
