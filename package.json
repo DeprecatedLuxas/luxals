@@ -1,6 +1,6 @@
 {
   "name": "@luxass/luxals",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A collection of JavaScript & TypeScript utilities.",
   "author": "Lucas Norgaard <lucasnrgaard@gmail.com>",
   "license": "MIT",
