@@ -4,7 +4,17 @@ import { get, has } from "../src";
 describe("object test", () => {
   describe("get test", () => {
     it("should return a b c", () => {
+      // const obj = {
+      //   a: {
+      //     b: {
+      //       c: "d"
+      //     }
+      //   }
+      // };
+
+      // expect(get(obj, "a.b.c")).toBe("d");
       expect(true).toBe(true);
+
     });
   });
 
