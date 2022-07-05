@@ -19,20 +19,20 @@ describe("string test", () => {
     });
   });
 
-  // describe("toPath test", () => {
-  //   it("object path", () => {
-  //     const path = "a.b.c";
-  //     expect(toPath(path)).toBe(["a", "b", "c"]);
-  //   });
+  describe("toPath test", () => {
+    it("object path", () => {
+      const path = "a.b.c";
+      expect(toPath(path)).toBe(["a", "b", "c"]);
+    });
 
-  //   it("object with arrays", () => {
-  //     const path = "users[0].friends[3].name";
-  //     expect(toPath(path)).toBe(["users", 0, "friends", 3, "name"]);
-  //   });
+    it("object with arrays", () => {
+      const path = "users[0].friends[3].name";
+      expect(toPath(path)).toBe(["users", 0, "friends", 3, "name"]);
+    });
 
-  //   it("array path", () => {
-  //     const path = "[0].name";
-  //     expect(toPath(path)).toBe([0, "name"]);
-  //   });
-  // });
+    it("array path", () => {
+      const path = "[0].name";
+      expect(toPath(path)).toBe([0, "name"]);
+    });
+  });
 });

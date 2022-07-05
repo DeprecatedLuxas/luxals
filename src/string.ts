@@ -1,3 +1,5 @@
+import type { Arrayable } from "./types";
+
 /**
  * Concat strings conditionally together.
  * @param {any[]} args The strings to concat.
@@ -42,6 +44,8 @@ export function capitalize(str: string): string {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-export function toPath(path: string) {
+export function toPath(path: Arrayable<string>) {
+  if (Array.isArray(path)) return path;
 
+  return [] as string[];
 }

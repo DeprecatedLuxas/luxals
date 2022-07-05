@@ -1,3 +1,4 @@
+import { toPath } from "./string";
 import type { Path } from "./types";
 
 /**
@@ -9,8 +10,13 @@ import type { Path } from "./types";
  * NOTE: When using an array, the auto-completion will break.
  * @TODO: @luxass - Fix auto-completion
  */
-export function get<O>(obj: O, path: Path<O>, defaultValue?: any) {
+export function get<O = Object>(obj: O, path: Path<O>, defaultValue?: any) {
+  if (!obj) return defaultValue;
+  const parsedPath = toPath(path as string);
+  const pathLength = 0;
 
+  
+  return defaultValue;
 }
 
 /**

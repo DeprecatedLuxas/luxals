@@ -21,6 +21,11 @@ export type Optional<T> = T | undefined;
 export type Nullish<T> = T | null | undefined;
 
 /**
+ * Makes a type either T or T[]
+ */
+export type Arrayable<T> = T | T[];
+
+/**
  * All characters in uppercase
  */
 export type UpperCaseCharacters =
@@ -83,4 +88,3 @@ type ChildPath<T, K extends keyof T> = K extends string
       | `${K}.${Exclude<keyof T[K], keyof any[]> & string}`
     : never
   : never;
-
