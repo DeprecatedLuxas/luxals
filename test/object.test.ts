@@ -3,7 +3,7 @@ import { get, has } from "../src";
 
 describe("object test", () => {
   describe("get test", () => {
-    it("should return a b c", () => {
+    it("get test w/o arrays", () => {
       const obj = {
         a: {
           b: {
@@ -12,11 +12,44 @@ describe("object test", () => {
         }
       };
 
-      // expect(get(obj, "a.b.c")).toBe("d");
-      expect(get(obj, "a.b.c", "d")).toBe("d");
+      expect(get(obj, "a.b.c")).toBe("d");
+    });
 
-      expect(true).toBe(true);
+    it("get test with arrays", () => {
+      const obj = {
+        a: {
+          b: [
+            {
+              c: "d"
+            }
+          ]
+        }
+      };
 
+      expect(get(obj, "a.b[0].c")).toBe("d");
+    });
+
+    it("get test w/o arrays (default value)", () => {
+      const obj = {
+        a: {
+          b: ""
+        }
+      };
+
+      expect(get(obj, "a.b.c", "o")).toBe("o");
+    });
+
+    it("get test with arrays (default value)", () => {
+      const obj = {
+        a: {
+          b: [
+            {
+            }
+          ]
+        }
+      };
+
+      expect(get(obj, "a.b[0].c", "works")).toBe("works");
     });
   });
 

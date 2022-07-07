@@ -1,4 +1,7 @@
-import type { Arrayable } from "./types";
+import memoize from "fast-memoize";
+
+// prettier-ignore - will break eslitn operator linebreak
+const PATH_REGEX = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
 
 /**
  * Concat strings conditionally together.
@@ -44,8 +47,22 @@ export function capitalize(str: string): string {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-export function toPath(path: Arrayable<string>) {
-  if (Array.isArray(path)) return path;
+/**
+ * Converts a string to a string path.
+ * @param {string} path The string to convert.
+ * @returns {string[]} The string path.
+ *
+ * @example
+ * toPath("a.b.c"); // ["a", "b", "c"]
+ * toPath("a[0].b[1].c"); // ["a", "0", "b", "1", "c"]
+ */
+export const toPath = memoize((path: string): string[] => {
+  const parsedPath: string[] = [];
+  path.replace(PATH_REGEX, (match: string, ...args) => {
+    const number = args[0];
+    parsedPath.push(number || match);
+    return match;
+  });
 
-  return [] as string[];
-}
+  return parsedPath;
+});

@@ -1,5 +1,4 @@
 import { toPath } from "./string";
-import type { Path } from "./types";
 
 /**
  * Gets the value of the given path in the given object.
@@ -7,16 +6,18 @@ import type { Path } from "./types";
  * @param path The path to the property.
  * @param defaultValue The default value to return if the path is not found.
  *
- * NOTE: When using an array, the auto-completion will break.
- * @TODO: @luxass - Fix auto-completion
+ * @TODO: Fix auto-completion
  */
-export function get<O = Object>(obj: O, path: Path<O>, defaultValue?: any) {
+export function get<O extends object>(obj: O, path: string, defaultValue?: any): any {
   if (!obj) return defaultValue;
   const parsedPath = toPath(path as string);
-  const pathLength = 0;
+  let value: {
+    [key: string]: any;
+  } = obj;
 
-  
-  return defaultValue;
+  parsedPath.forEach(key => (value = value[key]));
+
+  return value ?? defaultValue;
 }
 
 /**
@@ -24,4 +25,11 @@ export function get<O = Object>(obj: O, path: Path<O>, defaultValue?: any) {
  * @param obj The object to get the property from.
  * @param path The path to the property.
  */
-export function has<O extends Object>(obj: O, path: string) {}
+export function has<O extends object>(obj: O, path: string): any {
+  const parsedPath = toPath(path);
+  
+}
+
+export function set<O = Object>(obj: O, path: string, value: string): any {
+  const parsedPath = toPath(path);
+}
