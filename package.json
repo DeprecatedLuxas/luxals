@@ -51,6 +51,7 @@
     "@commitlint/config-conventional": "^17.0.3",
     "@luxass/eslint-config": "^1.0.0",
     "@luxass/prettier-config": "^1.0.1",
+    "@types/lodash": "^4.14.182",
     "@types/node": "^18.0.3",
     "bumpp": "^8.2.1",
     "eslint": "^8.17.0",
@@ -60,6 +61,7 @@
     "vitest": "^0.16.0"
   },
   "dependencies": {
-    "fast-memoize": "^2.5.2"
+    "fast-memoize": "^2.5.2",
+    "lodash": "^4.17.21"
   }
 }

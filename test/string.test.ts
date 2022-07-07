@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { capitalize, concat, toPath } from "../src";
+import { capitalize, concat } from "../src";
 
 describe("string test", () => {
   describe("concat test", () => {
@@ -16,23 +16,6 @@ describe("string test", () => {
 
     it("should return luxals with uppercase L", () => {
       expect(capitalize("LUXALS")).toEqual("Luxals");
-    });
-  });
-
-  describe("toPath test", () => {
-    it("object path", () => {
-      const path = "a.b.c";
-      expect(toPath(path)).toStrictEqual(["a", "b", "c"]);
-    });
-
-    it("object with arrays", () => {
-      const path = "users[0].friends[3].name";
-      expect(toPath(path)).toStrictEqual(["users", "0", "friends", "3", "name"]);
-    });
-
-    it("array path", () => {
-      const path = "[0].name";
-      expect(toPath(path)).toStrictEqual(["0", "name"]);
     });
   });
 });
