@@ -1,4 +1,4 @@
-import { get, has, merge, set } from "lodash";
+import { get, has, merge, set } from "lodash-es";
 
 export { get, has, merge, set };
 export * from "./number";
