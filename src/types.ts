@@ -21,6 +21,11 @@ export type Optional<T> = T | undefined;
 export type Nullish<T> = T | null | undefined;
 
 /**
+ * Makes a type either T or T[]
+ */
+export type Arrayable<T> = T | T[];
+
+/**
  * All characters in uppercase
  */
 export type UpperCaseCharacters =
@@ -72,15 +77,27 @@ export type UnionLiteral<T extends Primitive, L> = L | (T & Record<never, never>
 
 /**
  * Adds interface auto-completion with dot notation
- * @TODO: Write a better description for this.
+ * TODO: @luxass Write a better description for this.
  */
 export type Path<T> = ChildPath<T, keyof T> | keyof T;
 
 type ChildPath<T, K extends keyof T> = K extends string
   ? T[K] extends Record<string, any>
     ?
-      | `${K}.${ChildPath<T[K], Exclude<keyof T[K], keyof any[]>> & string}`
-      | `${K}.${Exclude<keyof T[K], keyof any[]> & string}`
+        | `${K}.${ChildPath<T[K], Exclude<keyof T[K], keyof any[]>> & string}`
+        | `${K}.${Exclude<keyof T[K], keyof any[]> & string}`
     : never
   : never;
 
+/**
+ * TODO: @luxass Write a better description for this.
+ */
+export type PathValue<T, P extends Path<T>> = P extends `${infer Key}.${infer Rest}`
+  ? Key extends keyof T
+    ? Rest extends Path<T[Key]>
+      ? PathValue<T[Key], Rest>
+      : never
+    : never
+  : P extends keyof T
+  ? Required<T[P]>
+  : never;

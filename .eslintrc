@@ -1,6 +1,6 @@
 {
   "extends": "@luxass",
   "rules": {
-    "eol-last": "off"
+    "@typescript-eslint/indent": "off"
   }
 }
