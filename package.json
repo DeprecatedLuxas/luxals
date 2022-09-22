@@ -2,29 +2,37 @@
   "name": "@luxass/luxals",
   "version": "3.0.6",
   "description": "A collection of JavaScript & TypeScript utilities.",
-  "author": "Lucas Norgaard <lucasnrgaard@gmail.com>",
+  "author": {
+    "name": "Lucas Norgaard",
+    "email": "lucasnrgaard@gmail.com",
+    "url": "https://luxass.dev"
+  },
   "license": "MIT",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.js",
       "import": "./dist/index.mjs"
+    },
+    "./string": {
+      "types": "./dist/string.d.ts",
+      "import": "./dist/string.mjs"
+    },
+    "./number": {
+      "types": "./dist/number.d.ts",
+      "import": "./dist/number.mjs"
+    },
+    "./pipi": {
+      "types": "./dist/pipi.d.ts",
+      "import": "./dist/pipi.mjs"
+    },
+    "./merge": {
+      "types": "./dist/merge.d.ts",
+      "import": "./dist/merge.mjs"
     }
   },
-  "main": "./dist/index.js",
+  "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "publishConfig": {
-    "access": "public"
-  },
-  "typesVersions": {
-    "*": {
-      "*": [
-        "./dist/*",
-        "./dist/index.d.ts"
-      ]
-    }
-  },
   "files": [
     "dist"
   ],
@@ -40,28 +48,30 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "test": "vitest run",
-    "lint": "eslint src/**/*.ts",
-    "lint:fix": "eslint src/**/*.ts --fix",
-    "prepare": "husky install",
-    "bump": "bumpp --commit --push --tag",
-    "release": "pnpm publish --access=public"
+    "format": "prettier --write --cache .",
+    "lint": "eslint --cache src/**/*.ts"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.0.3",
-    "@commitlint/config-conventional": "^17.0.3",
-    "@luxass/eslint-config": "^1.0.0",
-    "@luxass/prettier-config": "^1.0.1",
-    "@types/lodash-es": "^4.17.6",
-    "@types/node": "^18.0.3",
-    "bumpp": "^8.2.1",
-    "eslint": "^8.17.0",
-    "husky": "^8.0.0",
-    "tsup": "^6.1.3",
-    "typescript": "^4.7.3",
+    "@luxass/eslint-config": "^1.0.7",
+    "@luxass/prettier-config": "^1.0.4",
+    "@types/node": "^18.7.18",
+    "eslint": "^8.23.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "simple-git-hooks": "^2.8.0",
+    "tsup": "^6.2.3",
+    "typescript": "^4.8.3",
     "vitest": "^0.16.0"
   },
   "dependencies": {
-    "fast-memoize": "^2.5.2",
-    "lodash-es": "^4.17.21"
+    "fast-memoize": "^2.5.2"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged false"
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --write --cache --ignore-unknown"
+    ]
   }
 }

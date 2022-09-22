@@ -1,9 +1,21 @@
-import { defineConfig } from "tsup";
+import { defineConfig } from 'tsup';
+
+const files = [
+  'src/index.ts',
+  'src/number.ts',
+  'src/string.ts',
+  'src/pipi.ts',
+  'src/types.ts',
+  'src/merge.ts',
+  'src/random/index.ts',
+  'src/random/mersenne.ts'
+];
 
 export default defineConfig({
-  entry: ["src/index.ts"],
-  format: ["cjs", "esm"],
+  entry: files,
+  format: ['esm'],
   clean: true,
-  splitting: false,
+  bundle: true,
+  splitting: true,
   dts: true
 });
